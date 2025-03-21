@@ -25,7 +25,7 @@ export default function Home()
     }
   });
   
-  let todaysIndex = days.indexOf( todaysDay );
+  const todaysIndex = days.indexOf( todaysDay );
 
   mapArr.push( days[todaysIndex] );
   
