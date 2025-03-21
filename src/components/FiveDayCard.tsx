@@ -31,7 +31,6 @@ const FiveDayCard = (props: {day: string, days: string[], months: string[], date
 
   const [currentDate, setCurrentDate] = useState<string>("");
   const [day, setDay] = useState<string>("");
-  // const [month, setMonth] = useState<string>("");
 
   const isToday: boolean = day == props.day;
 
@@ -40,7 +39,6 @@ const FiveDayCard = (props: {day: string, days: string[], months: string[], date
     setCurrentDate( props.date.toString() );
 
     const slicedDay = currentDate.slice( 0,3 );
-    const slicedMonth = currentDate.slice( 4,7 );
 
     props.days.forEach(day =>
     {
@@ -49,14 +47,6 @@ const FiveDayCard = (props: {day: string, days: string[], months: string[], date
             setDay( day );
         }
     });
-
-    // props.months.forEach(month =>
-    // {
-    //     if ( month.includes( slicedMonth ) )
-    //     {
-    //         setMonth( month );
-    //     }
-    // });
   },[currentDate])
 
   return (

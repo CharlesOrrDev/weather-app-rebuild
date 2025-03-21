@@ -1,7 +1,7 @@
 "use client"
 
 import { useAppContext } from '@/context/context';
-import { getLocData, getWeatherData } from '@/services/services'
+import { getLocData } from '@/services/services'
 import React, { useEffect, useState } from 'react'
 
 const SearchBar = () =>
@@ -11,7 +11,7 @@ const SearchBar = () =>
   const [state, setState] = useState<string>("");
   const [country, setCountry] = useState<string>("");
 
-  const {lat, setLat, lon, setLon} = useAppContext();
+  const {setLat, setLon} = useAppContext();
 
   useEffect(() =>
   {
@@ -20,18 +20,12 @@ const SearchBar = () =>
     setCountry(search.split(",")[2]);
   },[search])
 
-  let weathData = {};
-
   const getData = async () =>
   {
     const data = await getLocData(city, state, country, 5);
 
     setLat( data[0].lat );
     setLon( data[0].lon );
-
-    console.log( lat, lon )
-
-    weathData = await getWeatherData(lat, lon, 5);
   }
 
   useEffect(() =>

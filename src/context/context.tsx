@@ -15,10 +15,10 @@ interface Context
 const AppContext = createContext<Context>(
 {
     lat: 0,
-    setLat: (lat: number) => 0,
+    setLat: () => 0,
 
     lon: 0,
-    setLon: (lon: number) => 0
+    setLon: () => 0
 });
 
 
