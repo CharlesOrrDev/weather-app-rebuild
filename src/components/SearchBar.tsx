@@ -24,7 +24,7 @@ const SearchBar = () =>
 
   const getData = async () =>
   {
-    let data = await getLocData(city, state, country, 5);
+    const data = await getLocData(city, state, country, 5);
 
     setLat( data[0].lat );
     setLon( data[0].lon );

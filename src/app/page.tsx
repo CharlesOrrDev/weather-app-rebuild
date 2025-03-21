@@ -5,11 +5,11 @@ import TodaysWeather from "@/components/TodaysWeather";
 
 export default function Home()
 {
-  let date = new Date();
-  let slicedDate = date.toString().slice( 0,3 );
-  let slicedMonth = date.toString().slice( 4,7 );
+  const date = new Date();
+  const slicedDate = date.toString().slice( 0,3 );
+  const slicedMonth = date.toString().slice( 4,7 );
   let dayNumber = date.toString().slice( 8,10 );
-  let year = date.toString().slice( 11,15 );
+  const year = date.toString().slice( 11,15 );
 
   const days: string[] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   const months: string[] = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -31,7 +31,7 @@ export default function Home()
   
   for( let i = 0; i < 4; i++ )
   {
-    let nextDay = 0
+    let nextDay = 0;
     if ( days.indexOf(mapArr[i]) + 1 <= 6 )
     {
       nextDay = days.indexOf(mapArr[i]) + 1;

@@ -39,8 +39,8 @@ const FiveDayCard = (props: {day: string, days: string[], months: string[], date
   {
     setCurrentDate( props.date.toString() );
 
-    let slicedDay = currentDate.slice( 0,3 );
-    let slicedMonth = currentDate.slice( 4,7 );
+    const slicedDay = currentDate.slice( 0,3 );
+    const slicedMonth = currentDate.slice( 4,7 );
 
     props.days.forEach(day =>
     {
