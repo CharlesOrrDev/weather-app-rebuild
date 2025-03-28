@@ -2,7 +2,7 @@ const APIkey = process.env.NEXT_PUBLIC_APIkey;
 
 export const getLocData = async (cityName: string, stateCode: string, countryCode: string, limit: number) =>
 {
-    const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName},${stateCode},${countryCode}&limit=${limit}&appid=${APIkey}`);
+    const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName},${stateCode},${countryCode}&limit=${limit}&appid=${APIkey}`);
     const data = await response.json();
 
     return data;
