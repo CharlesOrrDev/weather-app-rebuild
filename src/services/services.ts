@@ -1,4 +1,4 @@
-const APIkey = process.env.NEXT_PUBLIC_MY_APIkey;
+const APIkey = process.env.NEXT_PUBLIC_APIkey;
 
 export const getLocData = async (cityName: string, stateCode: string, countryCode: string, limit: number) =>
 {
